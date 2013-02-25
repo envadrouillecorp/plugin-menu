@@ -31,11 +31,12 @@ var JMenu = {
 
    retoreGallery:function() {
       $(window).scrollTop();
-      var pos = "-54px";
+      var pos = "-50px";
       $('#header').css('display', 'block');
       $('#o').css('display', 'block');
       $('.subheader').css('display', 'block');
       $('#menu-page').remove();
+      $('#wrapper').css('marginTop', '20px');
       $('.menu-speech-bubble').stop().unbind('mouseenter mouseleave').css({position:'absolute', zIndex:'5000'}).animate({top:pos}, '5000', function () {
          $('.menu-speech-bubble').hover(function() {
             $(this).stop().animate({top:0});
@@ -47,13 +48,22 @@ var JMenu = {
 
    commonMenuPage:function(cb) {
       $(window).scrollTop();
+      $('.menu-speech-bubble').stop().unbind('mouseenter mouseleave').stop().css({top:'0px', position:'relative'});
       $('#header').css('display', 'none');
       $('#o').css('display', 'none');
       $('.subheader').css('display', 'none');
+      $('#wrapper').css('marginTop', '0px');
+
+      if(jGallery.theme != 'default') {
+         var themes = config.getThemes();
+         jGallery.switchTheme('default', themes['default'].BG, themes['default'].FG);
+         $('#theme').val('default');
+         return;
+      }
+
       $('#content').css('opacity', 1);
       $('#menu-page').remove();
       $('#wrapper').prepend($('<div id="menu-page"><div style="height:50px"></div></div>'));
-      $('.menu-speech-bubble').stop().unbind('mouseenter mouseleave').stop().css({top:'0px', position:'relative'});
       
       cb();
    },
@@ -65,7 +75,8 @@ var JMenu = {
                +'<li>Themable</li>'
             +'</ul>');
          var content =  
-         '<div class="slider-wrapper theme-default">'
+          '<div class="menu-title">EnVadrouille</div>'
+         +'<div class="slider-wrapper theme-default">'
             + '<div id="slider" class="nivoSlider glossy">'
                + '<img src="admin/pages/menu/css/imgs/s01.jpg" alt="s01" />'
                + '<img src="admin/pages/menu/css/imgs/s02.jpg" alt="s02" />'
@@ -148,7 +159,7 @@ var JMenu = {
 
    addHeader:function() {
       var header = $(
-            '<div class="menu-speech-bubble"><img src="./admin/pages/menu/css/logo.fw.png" class="logo" /><div class="nav"><nav><ul>'
+            '<div class="menu-speech-bubble"><div class="nav"><nav><ul>'
             +   '<li id="home"><a>Home</a></li>'
             +   '<li id="demo"><a>Demo</a></li>'
             +   '<li id="plugins"><a>Plugins<span class="badge green">2</span></a></li>'
