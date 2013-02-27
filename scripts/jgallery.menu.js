@@ -4,8 +4,16 @@
  * Released under MIT License
  */
 var JMenu = {
-   changeLang:function(action) {
-      if(jGallery.lang == 'fr') {
+   changeLang:function(lang) {
+      if(lang) {
+         $.cookie('lang', lang);
+         $('#language').val(lang);
+         if(window.jGallery)
+            jGallery.switchLang(lang);
+      }
+      var curr_lang = lang || jGallery.lang;
+      if(curr_lang == 'fr') {
+         config.tr['title'] = "EnVadrouille, la plus rapide des galeries photos";
          config.tr['s01'] = 'Affichez votre parcours avec vos photos';
          config.tr['s02'] = 'Affichez des statistiques sur vos performances sportives';
          config.tr['s03'] = 'Recherchez dans vos galeries (fonctionne sans PHP !)';
@@ -13,31 +21,81 @@ var JMenu = {
          config.tr['s05'] = 'Installez plusieurs themes pour adapter la galerie à vos goûts';
          config.tr['s06'] = 'Administration - Vue principale';
          config.tr['s07'] = 'Administration - Reconnaissance faciale';
-      } else if(jGallery.lang == 'en') {
+         config.tr['dlbig'] = 'Télécharger<small>575KB</small>';
+         config.tr['firstlist'] = '<li>Gratuit</li>'
+               +'<li>Affiche des cartes de vos randos</li>'
+               +'<li>Affiche les images jpg, gif et png</li>'
+               +'<li>Recherche instantanée</li>'
+               +'<li>Affiche les vidéos avi, mp4, ogv et webm</li>'
+               +'<li>Reconnaissance faciale</li>'
+               +'<li>Possède plusieurs <a href="#themes" class="demo-link">thèmes</a></li>'
+               +'<li>Peut être étendu via des <a href="#plugins" class="demo-link">plugins</a></li>'
+               +'<li>Traduit en plusieurs langues</li>'
+               +'<li>Disponible sur <a href="https://github.com/envadrouillecorp/envadrouille" class="demo-link">github</a></li>'
+               +'<li>Fonctionne sans base SQL</li>'
+               +'<li>Fonctionne sans PHP* !</li>';
+         config.tr['nophp'] = '*Une fois les galleries générées, il est possible de supprimer la partie administration. Le reste de la galerie ne nécessite pas PHP pour fonctionner. La recherche et la reconnaissance faciale fonctionnent sans PHP.';
+         config.tr['browse'] = 'ou <a href="#" class="demo-link">jetez un oeil sur la démo !</a>';
+         config.tr['Features'] = 'Fonctionnalités';
+         config.tr['others'] = 'Et, contrairement à beaucoup d\'autres galeries...';
+         config.tr['secondlist'] = '<li>L\'historique du navigateur fonctionne. Le bouton précédent ramène sur la dernière page visitée.</li>'
+               +'<li>Un clic-molette sur une image affiche l\'image originale dans un nouvel onglet.</li>'
+               +'<li>Un clic-molette sur une galerie ouvre la galerie dans un nouvel onglet.</li>'
+               +'<li>Grâce à DownThemAll, il est possible de télécharger une galerie complète en un clic sans passer via le téléchargement d\'un fichier zip gigantesque.</li>'
+               +'<li>Vous pouvez déplacer tout votre site dans votre dossier Public Dropbox et le site continuera à fonctionner directement depuis votre Dropbox! (<a href="http://dl.dropbox.com/u/146655840/index.html" class="demo-link">demo</a>)</li>'
+               +'<li>La plupart des opérations sont instantanées (par exemple changer la langue de cette page ne nécessite pas de recharger la page).</li>';
+      } else if(curr_lang == 'en') {
+         config.tr['title'] = "EnVadrouille, a fast and beautiful photo gallery";
          config.tr['s01'] = 'Show GPX traces of your trips with your pictures';
          config.tr['s02'] = 'Display detailled statistics';
          config.tr['s03'] = 'Search in your galleries (works without PHP!)';
-         config.tr['s04'] = 'Recognize faces in your picture (without PHP!)';
+         config.tr['s04'] = 'Recognize faces in your pictures (without PHP!)';
          config.tr['s05'] = 'Customize the gallery by installing multiple themes';
          config.tr['s06'] = 'Administration - Main view';
          config.tr['s07'] = 'Administration - Face recognition';
+         config.tr['dlbig'] = 'Download<small>Only 575KB</small>';
+         config.tr['firstlist'] = '<li>Free</li>'
+               +'<li>Displays maps of your trips</li>'
+               +'<li>Supports jpg, gif and png images</li>'
+               +'<li>Instant search</li>'
+               +'<li>Supports avi, mp4, ogv, webm videos</li>'
+               +'<li>Face recognition</li>'
+               +'<li>Supports <a href="#themes" class="demo-link">themes</a></li>'
+               +'<li>Supports <a href="#plugins" class="demo-link">plugins</a></li>'
+               +'<li>Supports multiple languages</li>'
+               +'<li>Available on <a href="https://github.com/envadrouillecorp/envadrouille" class="demo-link">github</a></li>'
+               +'<li>Does not require an SQL database</li>'
+               +'<li>Does not require PHP*</li>';
+         config.tr['nophp'] = '*Once pictures have been added to the galleries, you can safely remove the administration, which is the only part of the gallery requiring PHP. Search and face recognition will continue to work without PHP.';
+         config.tr['browse'] = 'or <a href="#" class="demo-link">browse the demo!</a>';
+         config.tr['Features'] = 'Features';
+         config.tr['others'] = 'And also, unlike many galleries...';
+         config.tr['secondlist'] = '<li>Your browser history works. The back button will not bring you to a random page.</li>'
+               +'<li>A middle click on an image will directly display the full-sized version of the image.</li>'
+               +'<li>All gallery links are middle-clickable. When you middle-click on a gallery, it will open it on a new tab and not just show random javascript errors.</li>'
+               +'<li>Using DownThemAll your visitors can download all original pictures of a gallery in one click.</li>'
+               +'<li>You can upload your full site in your public DropBox directory and it will continue to work! (<a href="http://dl.dropbox.com/u/146655840/index.html" class="demo-link">demo</a>)</li>'
+               +'<li>Most of the operations performed by the gallery are instantaneous (e.g., try to change the language of this page).</li>';
       }
-      $('#slider img').each(function() {
-         $(this).attr('title', jGalleryModel.translate($(this).attr('alt')));
-      });
+      if(lang && JMenu.pages(jGallery.currentPage) && window.jGallery) {
+         jGallery.canReload = 1;
+         jGallery.switchPage(jGallery.currentPage);
+      }
+      return false;
    },
 
    firstCall:true,
 
    retoreGallery:function() {
       $(window).scrollTop();
-      var pos = "-50px";
+      var pos = "-32px";
       $('#header').css('display', 'block');
       $('#o').css('display', 'block');
       $('.subheader').css('display', 'block');
       $('#menu-page').remove();
       $('#wrapper').css('marginTop', '20px');
       $('.menu-speech-bubble').stop().unbind('mouseenter mouseleave').css({position:'absolute', zIndex:'5000'}).animate({top:pos}, '5000', function () {
+         $('.menu-speech-bubble').addClass('menu-speech-bubble-arrow');
          $('.menu-speech-bubble').hover(function() {
             $(this).stop().animate({top:0});
          }, function() {
@@ -47,12 +105,15 @@ var JMenu = {
    },
 
    commonMenuPage:function(cb) {
+      JMenu.changeLang();
       $(window).scrollTop();
+      $('.menu-speech-bubble-bottom2').stop().css({'opacity':0});
       $('.menu-speech-bubble').stop().unbind('mouseenter mouseleave').stop().css({top:'0px', position:'relative'});
       $('#header').css('display', 'none');
       $('#o').css('display', 'none');
       $('.subheader').css('display', 'none');
       $('#wrapper').css('marginTop', '0px');
+      $('.menu-speech-bubble').removeClass('menu-speech-bubble-arrow');
 
       if(jGallery.theme != 'default') {
          var themes = config.getThemes();
@@ -69,13 +130,11 @@ var JMenu = {
    },
 
    home:function() {
+      var t = jGalleryModel.translate;
+      document.title = t('title');
       JMenu.commonMenuPage(function() {
-         var content = $('<ul class="check">'
-               +'<li>Fast</li>'
-               +'<li>Themable</li>'
-            +'</ul>');
          var content =  
-          '<div class="menu-title">EnVadrouille</div>'
+          '<div class="menu-title"><img src="./admin/pages/menu/css/logo.png" /></div>'
          +'<div class="slider-wrapper theme-default">'
             + '<div id="slider" class="nivoSlider glossy">'
                + '<img src="admin/pages/menu/css/imgs/s01.jpg" alt="s01" />'
@@ -87,12 +146,28 @@ var JMenu = {
                + '<img src="admin/pages/menu/css/imgs/s07.jpg" alt="s07" />'
             + '</div>'
          +'</div>';
+         content += 
+            '<div style="text-align:center;width:100%"><a class="a-btn" href="http://update.envadrouille.org/latest.zip">'
+				+'<span class="a-btn-text">'+t('dlbig')+'</span>'
+            +'<span class="a-btn-icon-right"><span></span></span>'
+				+'</a> '+t('browse')+'</div>';
+         content += '<div class="features">'+t('Features')+'</div>';
+         content += '<ul class="check">'
+               + t('firstlist')
+            +'</ul>'
+            +'<small class="check-small">'+t('nophp')+'</small>';
+         content += '<div class="features">'+t('others')+'</div>';
+         content += '<ul class="check2">'
+               +t('secondlist')
+            +'</ul>'
+            +'<div style="height:60px"></div>';
+     
          $('#menu-page').append(content);
          $('#slider img').each(function() {
-            $(this).attr('title', jGalleryModel.translate($(this).attr('alt')));
+            $(this).attr('title', t($(this).attr('alt')));
             $(this).attr('data-thumb', $(this).attr('src'));
          });
-         $('#slider').nivoSlider({effect:'fade'});
+         $('#slider').nivoSlider({effect:'fade',pauseTime: 6000});
       });
    },
 
@@ -102,9 +177,10 @@ var JMenu = {
 
    plugins:function() {
       JMenu.commonMenuPage(function() {
-         var content = $('<ul>'
-               +'<li id="comments" JClass="JComments">Comments</li>'
-               +'<li id="feedback">Stuff</li>'
+         var content = $('<ul class="plugins">'
+               +'<li id="face" JClass="JFace"><img src="./admin/pages/menu/css/comment-face.png" /><h2>Face Recognition</h2>This plugin allows you to recognize and search faces in your galleries.<div class="dl"></div><div class="seenow"></div></li>'
+               +'<li id="comments" JClass="JComments"><img src="./admin/pages/menu/css/comment-bubble.png" /><h2>Comments</h2>This plugin allows adds a comment box bellow your pictures in your galleries (note: the comment box do not appear in the gallery index).<div class="dl"></div><div class="seenow"></div></li>'
+               +'<li id="feedback" JClass="JFeedback"><img src="./admin/pages/menu/css/feedback-bubble.png" /><h2>Feedback</h2>This plugin adds a "feedback" button in the bottom left corner of the site. When clicked, you can take a screenshot of the site and highlight precise parts of a gallery. Developped to ease the reporting of bugs. You can use it on this gallery if you notice something odd.<div class="dl"></div><div class="seenow"></div></li>'
             +'</ul>');
          $('#menu-page').append(content);
          $('#menu-page li').click(function() {
@@ -160,11 +236,12 @@ var JMenu = {
    addHeader:function() {
       var header = $(
             '<div class="menu-speech-bubble"><div class="nav"><nav><ul>'
-            +   '<li id="home"><a>Home</a></li>'
-            +   '<li id="demo"><a>Demo</a></li>'
-            +   '<li id="plugins"><a>Plugins<span class="badge green">2</span></a></li>'
-            +   '<li id="themes"><a>Themes<span class="badge green">3</span></a></li>'
-            +'</ul></nav></div><div class="menu-speech-bubble-bottom"></div></div>');
+            +   '<li id="home"><a><img style="margin-top:5px" src="./admin/pages/menu/css/home.png" /></a></li>'
+            +   '<li id=""><a>Demo</a></li>'
+            +   '<li id="plugins"><a>Plugins</a></li>'
+            +   '<li id="themes"><a>Themes</a></li>'
+            +'</ul></nav></div>'
+            +'<div class="dl"><img alt="en" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAIAAAD5gJpuAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAHzSURBVHjaYkxOP8IAB//+Mfz7w8Dwi4HhP5CcJb/n/7evb16/APL/gRFQDiAAw3JuAgAIBEDQ/iswEERjGzBQLEru97ll0g0+3HvqMn1SpqlqGsZMsZsIe0SICA5gt5a/AGIEarCPtFh+6N/ffwxA9OvP/7//QYwff/6fZahmePeB4dNHhi+fGb59Y4zyvHHmCEAAAW3YDzQYaJJ93a+vX79aVf58//69fvEPlpIfnz59+vDhw7t37968efP3b/SXL59OnjwIEEAsDP+YgY53b2b89++/awvLn98MDi2cVxl+/vl6mituCtBghi9f/v/48e/XL86krj9XzwEEEENy8g6gu22rfn78+NGs5Ofr16+ZC58+fvyYwX8rxOxXr169fPny+fPn1//93bJlBUAAsQADZMEBxj9/GBxb2P/9+S/R8u3vzxuyaX8ZHv3j8/YGms3w8ycQARmi2eE37t4ACCDGR4/uSkrKAS35B3TT////wADOgLOBIaXIyjBlwxKAAGKRXjCB0SOEaeu+/y9fMnz4AHQxCP348R/o+l+//sMZQBNLEvif3AcIIMZbty7Ly6t9ZmXl+fXj/38GoHH/UcGfP79//BBiYHjy9+8/oUkNAAHEwt1V/vI/KBY/QSISFqM/GBg+MzB8A6PfYC5EFiDAABqgW776MP0rAAAAAElFTkSuQmCC" />&nbsp;<img alt="fr" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAIAAAD5gJpuAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAGzSURBVHjaYiyeepkBBv79+Zfnx/f379+fP38CyT9//jAyMiq5GP77wvDnJ8MfoAIGBoAAYgGqC7STApL///3/9++/pCTv////Qdz/QO4/IMna0vf/z+9/v379//37bUUTQACBNDD8Z/j87fffvyAVX79+/Q8GQDbQeKA9fM+e/Pv18/+vnwzCIkBLAAKQOAY5AIAwCEv4/4PddNUm3ji0QJyxW3rgzE0iLfqDGr2oYuu0l54AYvnz5x9Q6d+/QPQfyAQqAin9B3EOyG1A1UDj//36zfjr1y8GBoAAFI9BDgAwCMIw+P8Ho3GDO6XQ0l4MN8b2kUwYaLszqgKM/KHcDXwBxAJUD3TJ779A8h9Q5D8SAHoARP36+Rfo41+/mcA2AAQQy49ff0Cu//MPpAeI/0FdA1QNYYNVA/3wmwEYVgwMAAHE8uPHH5BqoD1//gJJLADoJKDS378Z//wFhhJAALF8A3rizz8uTmYg788fJkj4QOKREQyYxSWBhjEC/fcXZANAALF8+/anbcHlHz9+ffvx58uPX9KckkCn/gby/wLd8uvHjx96k+cD1UGiGQgAAgwA7q17ZpsMdUQAAAAASUVORK5CYII=" /></div>');
       $('body').prepend(header);
       $('.menu-speech-bubble').css('top', 0);
       $('.menu-speech-bubble a').click(function(evt) {
@@ -174,6 +251,10 @@ var JMenu = {
          $(window).scrollTop();
          evt.stopPropagation();
          jGallery.switchPage($(this).parent().attr('id'));
+      });
+      $('.dl img').click(function(evt) {
+         evt.stopPropagation();
+         JMenu.changeLang($(this).attr('alt'));
       });
    },
 
@@ -192,15 +273,11 @@ var JMenu = {
 
       if(JMenu.initdone)
          return;
+
       JMenu.initdone = true;
 
       nivo(jQuery);
       JMenu.addHeader();
-
-      var langcb = $('<div class="customtranslate"/>').bind('languagechangeevt', function() {
-         JMenu.changeLang();
-      });
-      $('body').append(langcb);
    }
 };
 
