@@ -21,7 +21,7 @@ var JMenu = {
          config.tr['s05'] = 'Installez plusieurs themes pour adapter la galerie à vos goûts';
          config.tr['s06'] = 'Administration - Vue principale';
          config.tr['s07'] = 'Administration - Reconnaissance faciale';
-         config.tr['dlbig'] = 'Télécharger<small>575KB</small>';
+         config.tr['dlbig'] = 'Télécharger<small>444KB</small>';
          config.tr['firstlist'] = '<li>Gratuit</li>'
                +'<li>Affiche des cartes de vos randos</li>'
                +'<li>Affiche les images jpg, gif et png</li>'
@@ -53,7 +53,7 @@ var JMenu = {
          config.tr['s05'] = 'Customize the gallery by installing multiple themes';
          config.tr['s06'] = 'Administration - Main view';
          config.tr['s07'] = 'Administration - Face recognition';
-         config.tr['dlbig'] = 'Download<small>Only 575KB</small>';
+         config.tr['dlbig'] = 'Download<small>Only 444KB</small>';
          config.tr['firstlist'] = '<li>Free</li>'
                +'<li>Displays maps of your trips</li>'
                +'<li>Supports jpg, gif and png images</li>'
@@ -86,7 +86,7 @@ var JMenu = {
 
    firstCall:true,
 
-   retoreGallery:function() {
+   restoreGallery:function() {
       $(window).scrollTop();
       var pos = "-32px";
       $('#header').css('display', 'block');
@@ -115,7 +115,7 @@ var JMenu = {
       $('#wrapper').css('marginTop', '0px');
       $('.menu-speech-bubble').removeClass('menu-speech-bubble-arrow');
 
-      if(jGallery.theme != 'default') {
+      if(jGallery.themeName != 'default') {
          var themes = config.getThemes();
          jGallery.switchTheme('default', themes['default'].BG, themes['default'].FG);
          $('#theme').val('default');
@@ -177,13 +177,14 @@ var JMenu = {
 
    plugins:function() {
       JMenu.commonMenuPage(function() {
-         var content = $('<ul class="plugins">'
+         var content = $('<div><div class="shadow"></div><ul class="plugins">'
                +'<li id="face" JClass="JFace"><img src="./admin/pages/menu/css/comment-face.png" /><h2>Face Recognition</h2>This plugin allows you to recognize and search faces in your galleries.<div class="dl"></div><div class="seenow"></div></li>'
                +'<li id="comments" JClass="JComments"><img src="./admin/pages/menu/css/comment-bubble.png" /><h2>Comments</h2>This plugin allows adds a comment box bellow your pictures in your galleries (note: the comment box do not appear in the gallery index).<div class="dl"></div><div class="seenow"></div></li>'
                +'<li id="feedback" JClass="JFeedback"><img src="./admin/pages/menu/css/feedback-bubble.png" /><h2>Feedback</h2>This plugin adds a "feedback" button in the bottom left corner of the site. When clicked, you can take a screenshot of the site and highlight precise parts of a gallery. Developped to ease the reporting of bugs. You can use it on this gallery if you notice something odd.<div class="dl"></div><div class="seenow"></div></li>'
-            +'</ul>');
+               +'<li id="create" class="create"></li>'
+            +'</ul></div>');
          $('#menu-page').append(content);
-         $('#menu-page li').click(function() {
+         $('#menu-page li[JClass]').click(function() {
             var JClass = $(this).attr('JClass');
             var plugin = './admin/pages/'+$(this).attr('id')+'/scripts/jgallery.'+$(this).attr('id')+'.js';
             $script(plugin, plugin, function(neverLoaded) {
@@ -224,7 +225,7 @@ var JMenu = {
       if(JMenu.pages(action) !== null) {
          return true;
       } else {
-         JMenu.retoreGallery();
+         JMenu.restoreGallery();
          return false;
       }
    },
@@ -311,7 +312,9 @@ function nivo(a){var b=function(b,c){var d=a.extend({},a.fn.nivoSlider.defaults,
 
 
 $script.ready(['jquery'], function() {
-   JMenu.init();
+   $(document).ready(function() {
+      JMenu.init();
+   });
 });
 
 config.pluginsInstances.push(JMenu);

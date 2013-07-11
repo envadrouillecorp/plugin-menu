@@ -103,36 +103,43 @@
     text-transform: uppercase;
     width: 100%;
   }
-ul.plugins {
-   margin:0;
+.plugins {
+   margin:0 auto;
    padding:0;
    list-style:none;
+   text-align:center;
+   vertical-align:top;
 }
-.plugins li {
-    cursor:pointer;
-    color:#000;
-    border-radius:2px;
-    background: none repeat scroll 0 0 #EEE;
-    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-    display: block;
-    height: 50px;
-    margin:0px auto;
-    margin-bottom: 4px;
-    overflow: hidden;
-    position: relative;
-    transition: all 300ms linear 0s;
-    width: 80%;
-    padding:7px 10px 14px 100px;
-    font-family:'Terminal Dosis',Arial,sans-serif;
-    font-weight:bold;
+.plugins > li {
+   vertical-align:top;
+   background: none repeat scroll 0 0 #EEEEEE;
+   border: 2px solid black;
+   border-radius: 3px 3px 3px 3px;
+   color: #000000;
+   cursor: pointer;
+   margin: 10px;
+   overflow: hidden;
+   padding: 10px;
+   position: relative;
+   height: 150px;
+   width: 250px;
+   font-size:12px;
+   display: inline-block;
+   margin:auto 0;
+   box-shadow: 1px 1px 240px #444;
 }
 
-.plugins li h2 {
+.plugins > li.create {
+   border: 5px dashed #fbbb4e;
+}
+
+.plugins > li h2 {
    margin:0;
-   font-size:30px;
+   font-size:14px;
+   font-weight: bold;
 }
 
-.plugins li:hover {
+.plugins > li:hover {
     background: none repeat scroll 0 0 #DDD;
 }
 
