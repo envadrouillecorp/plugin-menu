@@ -46,7 +46,7 @@
    margin:190px auto 0;
    font-size:14px;
 }
-.check li, .check2 li, .plugins {
+.check li, .check2 li, .plugins, .gen-descr {
     font-size: 15px;
     font-family:'Droid Sans','Helvetica Neue',Arial,sans-serif;
 }
@@ -66,6 +66,16 @@
 .check2 li {
 }
 
+.gen-descr {
+   text-align:center;
+   display:block;
+   margin-top:-30px;
+}
+.gen-descr ul {
+   margin-left:0;
+   padding-left:0;
+   list-style:none;
+}
 .menu-speech-bubble
 {
    width: 100%;

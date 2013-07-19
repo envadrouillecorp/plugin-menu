@@ -180,8 +180,9 @@ var JMenu = {
    plugins:function() {
       var t = jGalleryModel.translate;
       JMenu.commonMenuPage(function() {
-         var content = $('<div><div class="shadow"></div><ul class="plugins">'
-               +'<li id="face" JClass="JFace"><span class="img"><img src="./admin/pages/menu/css/plug01.png" /></span><span class="descr"><h2>Face Recognition</h2><p>This plugin allows you to recognize and search faces in your galleries.<br/><br/><i>This plugin is already shipped with the gallery.</i></p></span><div class="meta"><span class="icon"></span><span class="name">Facial recognition</span><span class="pdl">dl</span></div></li>'
+         var content = $('<div><div class="gen-descr"><b>To install a plugin</b><ul><li>Download the zip file of the plugin.</li><li>Decompress it in the ./admin/pages/ directory of the gallery</li><li>Go in the gallery options and activate the plugin</li></ul></div><br/><br/><ul class="plugins">'
+               +'<li id="face"><span class="img"><img src="./admin/pages/menu/css/plug01.png" /></span><span class="descr"><h2>Face Recognition</h2><p>This plugin allows you to recognize and search faces in your galleries.<br/><br/><i>This plugin is already shipped with the gallery.</i></p></span><div class="meta"><span class="icon"></span><span class="name">Facial recognition</span><span class="pdl">dl</span></div></li>'
+               +'<li id="gpx"><span class="img"><img src="./admin/pages/menu/css/plug04.png" /></span><span class="descr"><h2>GPX</h2><p>This plugin allows you to show maps in your galleries.<br/><br/><i>This plugin is already shipped with the gallery.</i></p></span><div class="meta"><span class="icon"></span><span class="name">Maps</span><span class="pdl">dl</span></div></li>'
                +'<li id="comments" JClass="JComments"><span class="img"><img src="./admin/pages/menu/css/plug02.png" /></span><span class="descr"><h2>Comments</h2><p>This plugin adds a comment box bellow your pictures in your galleries (note: the comment box do not appear in the gallery index).<br/><br/><i class="activate">Click to activate.</i></p></span><div class="meta"><span class="icon"></span><span class="name">Comments</span><span class="pdl">dl</span></div></li>'
                +'<li id="feedback" JClass="JFeedback"><span class="img"><img src="./admin/pages/menu/css/plug03.png" /></span><span class="descr"><h2>Feedback</h2><p>Adds a "feedback" button in the bottom left corner. When clicked, you can highlight precise parts of a gallery. Developped to ease the reporting of bugs. You can use it on this gallery if you notice something odd.<br/><br/><i class="activate">Click to activate.</i></p></span><div class="meta"><span class="icon"></span><span class="name">Feedback</span><span class="pdl">dl</span></div></li>'
             +'</ul></div>'
@@ -190,7 +191,7 @@ var JMenu = {
             +'<span class="a-btn-icon-rightd"><span></span></span>'
 				+'</a></div>');
          $('#menu-page').append(content);
-         $('#menu-page li[JClass]').each(function(id, v) {
+         $('#menu-page li').each(function(id, v) {
             $(v).hover(function() {
                $(v).find('.descr').stop().animate({opacity:1}, 'fast');
             }, function() {
