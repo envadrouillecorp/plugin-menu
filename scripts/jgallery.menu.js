@@ -22,6 +22,7 @@ var JMenu = {
          config.tr['s06'] = 'Administration - Vue principale';
          config.tr['s07'] = 'Administration - Reconnaissance faciale';
          config.tr['dlbig'] = 'Télécharger<small>444KB</small>';
+         config.tr['dev-plug'] = 'Créer votre propre plugin !';
          config.tr['firstlist'] = '<li>Gratuit</li>'
                +'<li>Affiche des cartes de vos randos</li>'
                +'<li>Affiche les images jpg, gif et png</li>'
@@ -54,6 +55,7 @@ var JMenu = {
          config.tr['s06'] = 'Administration - Main view';
          config.tr['s07'] = 'Administration - Face recognition';
          config.tr['dlbig'] = 'Download<small>Only 444KB</small>';
+         config.tr['dev-plug'] = 'Create your own plugin!';
          config.tr['firstlist'] = '<li>Free</li>'
                +'<li>Displays maps of your trips</li>'
                +'<li>Supports jpg, gif and png images</li>'
@@ -176,13 +178,17 @@ var JMenu = {
    },
 
    plugins:function() {
+      var t = jGalleryModel.translate;
       JMenu.commonMenuPage(function() {
          var content = $('<div><div class="shadow"></div><ul class="plugins">'
-               +'<li id="face" JClass="JFace"><img src="./admin/pages/menu/css/comment-face.png" /><h2>Face Recognition</h2>This plugin allows you to recognize and search faces in your galleries.<div class="dl"></div><div class="seenow"></div></li>'
-               +'<li id="comments" JClass="JComments"><img src="./admin/pages/menu/css/comment-bubble.png" /><h2>Comments</h2>This plugin allows adds a comment box bellow your pictures in your galleries (note: the comment box do not appear in the gallery index).<div class="dl"></div><div class="seenow"></div></li>'
-               +'<li id="feedback" JClass="JFeedback"><img src="./admin/pages/menu/css/feedback-bubble.png" /><h2>Feedback</h2>This plugin adds a "feedback" button in the bottom left corner of the site. When clicked, you can take a screenshot of the site and highlight precise parts of a gallery. Developped to ease the reporting of bugs. You can use it on this gallery if you notice something odd.<div class="dl"></div><div class="seenow"></div></li>'
-               +'<li id="create" class="create"></li>'
-            +'</ul></div>');
+               +'<li id="face" JClass="JFace"><span class="descr"><h2>Face Recognition</h2><p>This plugin allows you to recognize and search faces in your galleries.</p></span><div class="meta"><span class="icon"></span><span class="name">Facial recognition</span><span class="pdl">dl</span></div></li>'
+               +'<li id="comments" JClass="JComments"><span class="descr"><h2>Comments</h2><p>This plugin allows adds a comment box bellow your pictures in your galleries (note: the comment box do not appear in the gallery index).</p></span><div class="meta"><span class="icon"></span><span class="name">Comments</span><span class="pdl">dl</span></div></li>'
+               +'<li id="feedback" JClass="JFeedback"><span class="descr"><h2>Feedback</h2><p>This plugin adds a "feedback" button in the bottom left corner of the site. When clicked, you can take a screenshot of the site and highlight precise parts of a gallery. Developped to ease the reporting of bugs. You can use it on this gallery if you notice something odd.</p></span><div class="meta"><span class="icon"></span><span class="name">Feedback</span><span class="pdl">dl</span></div></li>'
+            +'</ul></div>'
+            +'<div style="text-align:center;width:100%"><a class="a-btn" href="http://dev.envadrouille.org/#denomination">'
+				+'<span class="a-btn-text a-btn-text-dev">'+t('dev-plug')+'</span>'
+            +'<span class="a-btn-icon-rightd"><span></span></span>'
+				+'</a></div>');
          $('#menu-page').append(content);
          $('#menu-page li[JClass]').click(function() {
             var JClass = $(this).attr('JClass');
@@ -203,6 +209,7 @@ var JMenu = {
    },
 
    themes:function() {
+      var t = jGalleryModel.translate;
       JMenu.commonMenuPage(function() {
       });
    },
