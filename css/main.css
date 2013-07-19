@@ -46,15 +46,17 @@
    margin:190px auto 0;
    font-size:14px;
 }
+.check li, .check2 li, .plugins {
+    font-size: 15px;
+    font-family:'Droid Sans','Helvetica Neue',Arial,sans-serif;
+}
 .check li, .check2 li {
     background: url("check.png") no-repeat scroll left center transparent;
     display: inline-block;
     min-height: 25px;
     padding: 0 0 0 20px;
-    font-size: 15px;
     font-weight: bold;
     line-height: 25px;
-    font-family:'Droid Sans','Helvetica Neue',Arial,sans-serif;
     text-align:justify;
 }
 .check li {
@@ -115,8 +117,6 @@
    background: rgba(0,0,0,0.4);
    border-bottom: 1px solid rgba(255,255,255,0.2);
    position: relative;
-   font-size: 0.9em;
-   cursor: pointer;
    display: inline-block;
    height: 230px;
    margin: auto 5px 10px;
@@ -129,6 +129,15 @@
    color:#76daff;
    font-family: "HelveticaNeue-CondensedBold", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", Sans-Serif;
 }
+.plugins .descr {
+   display:block;
+   opacity:0;
+   background: none repeat scroll 0 0 rgba(0,0,0,0.9);
+   height: 100%;
+   position: absolute;
+   top: 0;
+   z-index: 1000;
+}
 .plugins p {
    text-align:justify;
    padding:5px;
@@ -138,23 +147,30 @@
    bottom:0;
    height:25px;
    width:100%;
-
+   z-index:6000;
+   font-weight:bold;
 }
 .plugins .name {
-   background:rgba(0,0,0,0.4);
+   background:rgba(0,0,0,0.7);
    float:left;
    height:25px;
-   width:228px;
+   width:226px;
    padding:5px;
    text-align:left;
 
 }
+.plugins .activate {
+   cursor: pointer;
+}
 .plugins .pdl {
-   background:rgba(0,0,0,0.4);
+   background: url("dl.png") no-repeat scroll 5px 6px rgba(20,20,20,0.7);
    float:right;
    height:25px;
    width:50px;
-   padding:5px;
+   padding:4px 1px 0 13px;
+   text-transform:uppercase;
+   color:#BEB;
+   cursor: pointer;
 }
 /*
 .plugins > li {
