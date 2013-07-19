@@ -123,9 +123,12 @@
    vertical-align:top;
    position:relative;
 }
+.plugins a {
+   color:#FFF;
+}
 .plugins  li {
    background: rgba(0,0,0,0.4);
-   border-bottom: 1px solid rgba(255,255,255,0.2);
+   border: 1px solid rgba(255,255,255,0.2);
    position: relative;
    display: inline-block;
    height: 230px;
@@ -134,6 +137,9 @@
    position: relative;
    vertical-align: top;
    width: 300px;
+}
+.themes li {
+   border: 3px solid rgba(255,255,255,0.2);
 }
 .plugins li h2 {
    color:#76daff;
@@ -147,6 +153,7 @@
    position: absolute;
    top: 0;
    z-index: 1000;
+   width:100%;
 }
 .plugins p {
    text-align:justify;

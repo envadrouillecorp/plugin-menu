@@ -22,20 +22,21 @@ var JMenu = {
          config.tr['s06'] = 'Administration - Vue principale';
          config.tr['s07'] = 'Administration - Reconnaissance faciale';
          config.tr['dlbig'] = 'Télécharger<small>444KB</small>';
-         config.tr['dev-plug'] = 'Créer votre propre plugin !';
+         config.tr['dev-plug'] = 'Créez votre propre plugin !';
+         config.tr['dev-th'] = 'Créez votre propre thème !';
          config.tr['firstlist'] = '<li>Gratuit</li>'
                +'<li>Affiche des cartes de vos randos</li>'
                +'<li>Affiche les images jpg, gif et png</li>'
                +'<li>Recherche instantanée</li>'
                +'<li>Affiche les vidéos avi, mp4, ogv et webm</li>'
                +'<li>Reconnaissance faciale</li>'
-               +'<li>Possède plusieurs <a href="#themes" class="demo-link">thèmes</a></li>'
-               +'<li>Peut être étendu via des <a href="#plugins" class="demo-link">plugins</a></li>'
+               +'<li>Possède plusieurs <a href="#!themes" class="demo-link">thèmes</a></li>'
+               +'<li>Peut être étendu via des <a href="#!plugins" class="demo-link">plugins</a></li>'
                +'<li>Traduit en plusieurs langues</li>'
                +'<li>Disponible sur <a href="https://github.com/envadrouillecorp/envadrouille" class="demo-link">github</a></li>'
                +'<li>Fonctionne sans base SQL</li>'
                +'<li>Fonctionne sans PHP* !</li>';
-         config.tr['nophp'] = '*Une fois les galleries générées, il est possible de supprimer la partie administration. Le reste de la galerie ne nécessite pas PHP pour fonctionner. La recherche et la reconnaissance faciale fonctionnent sans PHP.';
+         config.tr['nophp'] = '*Une fois les galeries générées, il est possible de désactiver PHP. La recherche de galeries et de visages fonctionne sans PHP. Seule l\'administration nécessite PHP.';
          config.tr['browse'] = 'ou <a href="#" class="demo-link">jetez un oeil sur la démo !</a>';
          config.tr['Features'] = 'Fonctionnalités';
          config.tr['others'] = 'Et, contrairement à beaucoup d\'autres galeries...';
@@ -45,6 +46,15 @@ var JMenu = {
                +'<li>Grâce à DownThemAll, il est possible de télécharger une galerie complète en un clic sans passer via le téléchargement d\'un fichier zip gigantesque.</li>'
                +'<li>Vous pouvez déplacer tout votre site dans votre dossier Public Dropbox et le site continuera à fonctionner directement depuis votre Dropbox! (<a href="http://dl.dropbox.com/u/146655840/index.html" class="demo-link">demo</a>)</li>'
                +'<li>La plupart des opérations sont instantanées (par exemple changer la langue de cette page ne nécessite pas de recharger la page).</li>';
+         config.tr['inst-plug'] = '<b>Pour installer un plugin</b><ul><li>Télécharger le fichier zip du plugin</li><li>Décompressez le dans le répertoire ./admin/pages/</li><li>Allez dans les options de l\'administration et activez le plugin</li></ul>';
+         config.tr['list-plug'] = '<li id="face"><span class="img"><img src="./admin/pages/menu/css/plug01.png" /></span><span class="descr"><h2>Reconnaissance faciale</h2><p>Ce plugin permet de reconnaitre les visages dans vos photos.<br/><br/><i>Ce plugin est installé par défaut.</i></p></span><div class="meta"><span class="icon"></span><span class="name">Reconnaissance faciale</span><span class="pdl">dl</span></div></li>'
+               +'<li id="gpx"><span class="img"><img src="./admin/pages/menu/css/plug04.png" /></span><span class="descr"><h2>GPX</h2><p>Ce plugin permet d\'afficher des cartes dans vos galeries.<br/><br/><i>Ce plugin est installé par défaut.</i></p></span><div class="meta"><span class="icon"></span><span class="name">Cartes</span><span class="pdl">dl</span></div></li>'
+               +'<li id="comments" JClass="JComments"><span class="img"><img src="./admin/pages/menu/css/plug02.png" /></span><span class="descr"><h2>Commentaires</h2><p>Ce plugin permet aux visiteurs de commenter vos galeries. (Note: il s\'affiche sur toutes les galeries sauf l\'index de la galerie.)<br/><br/><i class="activate">Cliquez pour activer le plugin.</i></p></span><div class="meta"><span class="icon"></span><span class="name">Comments</span><span class="pdl">dl</span></div></li>'
+               +'<li id="feedback" JClass="JFeedback"><span class="img"><img src="./admin/pages/menu/css/plug03.png" /></span><span class="descr"><h2>Feedback</h2><p>Ajoute un bouton de "feedback" en bas à gauche. Ce plugin permet, par exemple, mettre en valeur un bug. Vous pouvez l\'utiliser sur cette galerie en cas de problème.<br/><br/><i class="activate">Cliquez pour activer le plugin.</i></p></span><div class="meta"><span class="icon"></span><span class="name">Feedback</span><span class="pdl">dl</span></div></li>';
+         config.tr['inst-th'] = '<b>Pour installer un theme</b><ul><li>Téléchargez le zip du thème</li><li>Décompressez le dans le répertoire ./themes/</li><li>Allez dans les options de l\'administration et actualisez les options</li><li>Vous pouvez maintenant choisir ce thème via la "roue des options" visible en bas à droite dans la galerie.</li></ul>';
+         config.tr['list-th'] = '<li id="face"><span class="img"><img src="./admin/pages/menu/css/th01.png" /></span><span class="descr"><h2>Défaut</h2><p>Thème sombre par défaut.<br/><br/><i>Ce thème est installé par défaut.</i></p></span><div class="meta"><span class="icon"></span><span class="name">Défaut</span><span class="pdl">dl</span></div></li>'
+               +'<li id="face"><span class="img"><img src="./admin/pages/menu/css/th02.png" /></span><span class="descr"><h2>Photoshow</h2><p>Thème Photoshow, référence à la galerie <a href="http://www.photoshow-gallery.com/">Photoshow</a>.<br/><br/><i>Ce thème est installé par défaut.</i></p></span><div class="meta"><span class="icon"></span><span class="name">Photoshow</span><span class="pdl">dl</span></div></li>'
+               +'<li id="face"><span class="img"><img src="./admin/pages/menu/css/th03.png" /></span><span class="descr"><h2>Vieux thème</h2><p>Vieux thème clair. Thème utilisé en 2004 dans la première version d\'EnVadrouille.<br/><br/><i>Ce thème est installé par défaut.</i></p></span><div class="meta"><span class="icon"></span><span class="name">Old</span><span class="pdl">dl</span></div></li>';
       } else if(curr_lang == 'en') {
          config.tr['title'] = "EnVadrouille, a fast and beautiful photo gallery";
          config.tr['s01'] = 'Show GPX traces of your trips with your pictures';
@@ -56,19 +66,20 @@ var JMenu = {
          config.tr['s07'] = 'Administration - Face recognition';
          config.tr['dlbig'] = 'Download<small>Only 444KB</small>';
          config.tr['dev-plug'] = 'Create your own plugin!';
+         config.tr['dev-th'] = 'Create your own theme!';
          config.tr['firstlist'] = '<li>Free</li>'
                +'<li>Displays maps of your trips</li>'
                +'<li>Supports jpg, gif and png images</li>'
                +'<li>Instant search</li>'
                +'<li>Supports avi, mp4, ogv, webm videos</li>'
                +'<li>Face recognition</li>'
-               +'<li>Supports <a href="#themes" class="demo-link">themes</a></li>'
-               +'<li>Supports <a href="#plugins" class="demo-link">plugins</a></li>'
+               +'<li>Supports <a href="#!themes" class="demo-link">themes</a></li>'
+               +'<li>Supports <a href="#!plugins" class="demo-link">plugins</a></li>'
                +'<li>Supports multiple languages</li>'
                +'<li>Available on <a href="https://github.com/envadrouillecorp/envadrouille" class="demo-link">github</a></li>'
                +'<li>Does not require an SQL database</li>'
                +'<li>Does not require PHP*</li>';
-         config.tr['nophp'] = '*Once pictures have been added to the galleries, you can safely remove the administration, which is the only part of the gallery requiring PHP. Search and face recognition will continue to work without PHP.';
+         config.tr['nophp'] = '*Once pictures have been added to the galleries, you can safely disable PHP! Searching for galleries and faces does not require PHP. The administration is the only part of the gallery that requires PHP.';
          config.tr['browse'] = 'or <a href="#" class="demo-link">browse the demo!</a>';
          config.tr['Features'] = 'Features';
          config.tr['others'] = 'And also, unlike many galleries...';
@@ -78,6 +89,15 @@ var JMenu = {
                +'<li>Using DownThemAll your visitors can download all original pictures of a gallery in one click.</li>'
                +'<li>You can upload your full site in your public DropBox directory and it will continue to work! (<a href="http://dl.dropbox.com/u/146655840/index.html" class="demo-link">demo</a>)</li>'
                +'<li>Most of the operations performed by the gallery are instantaneous (e.g., try to change the language of this page).</li>';
+         config.tr['inst-plug'] = '<b>To install a plugin</b><ul><li>Download the zip file of the plugin</li><li>Decompress it in the ./admin/pages/ directory of the gallery</li><li>Go in the gallery options and activate the plugin</li></ul>';
+         config.tr['list-plug'] = '<li id="face"><span class="img"><img src="./admin/pages/menu/css/plug01.png" /></span><span class="descr"><h2>Face Recognition</h2><p>This plugin allows you to recognize and search faces in your galleries.<br/><br/><i>This plugin is already shipped with the gallery.</i></p></span><div class="meta"><span class="icon"></span><span class="name">Facial recognition</span><span class="pdl">dl</span></div></li>'
+               +'<li id="gpx"><span class="img"><img src="./admin/pages/menu/css/plug04.png" /></span><span class="descr"><h2>GPX</h2><p>This plugin allows you to show maps in your galleries.<br/><br/><i>This plugin is already shipped with the gallery.</i></p></span><div class="meta"><span class="icon"></span><span class="name">Maps</span><span class="pdl">dl</span></div></li>'
+               +'<li id="comments" JClass="JComments"><span class="img"><img src="./admin/pages/menu/css/plug02.png" /></span><span class="descr"><h2>Comments</h2><p>This plugin adds a comment box bellow your pictures in your galleries (note: the comment box do not appear in the gallery index).<br/><br/><i class="activate">Click to activate.</i></p></span><div class="meta"><span class="icon"></span><span class="name">Comments</span><span class="pdl">dl</span></div></li>'
+               +'<li id="feedback" JClass="JFeedback"><span class="img"><img src="./admin/pages/menu/css/plug03.png" /></span><span class="descr"><h2>Feedback</h2><p>Adds a "feedback" button in the bottom left corner. When clicked, you can highlight precise parts of a gallery. Developped to ease the reporting of bugs. You can use it on this gallery if you notice something odd.<br/><br/><i class="activate">Click to activate.</i></p></span><div class="meta"><span class="icon"></span><span class="name">Feedback</span><span class="pdl">dl</span></div></li>';
+         config.tr['inst-th'] = '<b>To install a theme</b><ul><li>Download the zip file of the theme</li><li>Decompress it in the ./themes/ directory of the gallery</li><li>Go in the gallery options and update the gallery</li><li>You can now choose the theme using the "option wheel" located in the bottom right corner</li></ul>';
+         config.tr['list-th'] = '<li id="face"><span class="img"><img src="./admin/pages/menu/css/th01.png" /></span><span class="descr"><h2>Default</h2><p>Default dark theme.<br/><br/><i>This theme is already shipped with the gallery.</i></p></span><div class="meta"><span class="icon"></span><span class="name">Default</span><span class="pdl">dl</span></div></li>'
+               +'<li id="face"><span class="img"><img src="./admin/pages/menu/css/th02.png" /></span><span class="descr"><h2>Photoshow</h2><p>Photoshow theme, tribute to the <a href="http://www.photoshow-gallery.com/">Photoshow gallery</a>.<br/><br/><i>This theme is already shipped with the gallery.</i></p></span><div class="meta"><span class="icon"></span><span class="name">Photoshow</span><span class="pdl">dl</span></div></li>'
+               +'<li id="face"><span class="img"><img src="./admin/pages/menu/css/th03.png" /></span><span class="descr"><h2>Old</h2><p>Old light theme. Old theme from the previous version of the EnVadrouille gallery, back in 2004.<br/><br/><i>This theme is already shipped with the gallery.</i></p></span><div class="meta"><span class="icon"></span><span class="name">Old</span><span class="pdl">dl</span></div></li>';
       }
       if(lang && JMenu.pages(jGallery.currentPage) && window.jGallery) {
          jGallery.canReload = 1;
@@ -108,7 +128,9 @@ var JMenu = {
 
    commonMenuPage:function(cb) {
       JMenu.changeLang();
+      document.title = jGalleryModel.translate('title');
       $(window).scrollTop();
+
       $('.menu-speech-bubble-bottom2').stop().css({'opacity':0});
       $('.menu-speech-bubble').stop().unbind('mouseenter mouseleave').stop().css({top:'0px', position:'relative'});
       $('#header').css('display', 'none');
@@ -133,7 +155,6 @@ var JMenu = {
 
    home:function() {
       var t = jGalleryModel.translate;
-      document.title = t('title');
       JMenu.commonMenuPage(function() {
          var content =  
           '<div class="menu-title"><img src="./admin/pages/menu/css/logo.png" /></div>'
@@ -180,12 +201,7 @@ var JMenu = {
    plugins:function() {
       var t = jGalleryModel.translate;
       JMenu.commonMenuPage(function() {
-         var content = $('<div><div class="gen-descr"><b>To install a plugin</b><ul><li>Download the zip file of the plugin.</li><li>Decompress it in the ./admin/pages/ directory of the gallery</li><li>Go in the gallery options and activate the plugin</li></ul></div><br/><br/><ul class="plugins">'
-               +'<li id="face"><span class="img"><img src="./admin/pages/menu/css/plug01.png" /></span><span class="descr"><h2>Face Recognition</h2><p>This plugin allows you to recognize and search faces in your galleries.<br/><br/><i>This plugin is already shipped with the gallery.</i></p></span><div class="meta"><span class="icon"></span><span class="name">Facial recognition</span><span class="pdl">dl</span></div></li>'
-               +'<li id="gpx"><span class="img"><img src="./admin/pages/menu/css/plug04.png" /></span><span class="descr"><h2>GPX</h2><p>This plugin allows you to show maps in your galleries.<br/><br/><i>This plugin is already shipped with the gallery.</i></p></span><div class="meta"><span class="icon"></span><span class="name">Maps</span><span class="pdl">dl</span></div></li>'
-               +'<li id="comments" JClass="JComments"><span class="img"><img src="./admin/pages/menu/css/plug02.png" /></span><span class="descr"><h2>Comments</h2><p>This plugin adds a comment box bellow your pictures in your galleries (note: the comment box do not appear in the gallery index).<br/><br/><i class="activate">Click to activate.</i></p></span><div class="meta"><span class="icon"></span><span class="name">Comments</span><span class="pdl">dl</span></div></li>'
-               +'<li id="feedback" JClass="JFeedback"><span class="img"><img src="./admin/pages/menu/css/plug03.png" /></span><span class="descr"><h2>Feedback</h2><p>Adds a "feedback" button in the bottom left corner. When clicked, you can highlight precise parts of a gallery. Developped to ease the reporting of bugs. You can use it on this gallery if you notice something odd.<br/><br/><i class="activate">Click to activate.</i></p></span><div class="meta"><span class="icon"></span><span class="name">Feedback</span><span class="pdl">dl</span></div></li>'
-            +'</ul></div>'
+         var content = $('<div><div class="gen-descr">'+t('inst-plug')+'</div><br/><br/><ul class="plugins">'+t('list-plug')+'</ul></div>'
             +'<div style="text-align:center;width:100%"><a class="a-btn" href="http://dev.envadrouille.org/#denomination">'
 				+'<span class="a-btn-text a-btn-text-dev">'+t('dev-plug')+'</span>'
             +'<span class="a-btn-icon-rightd"><span></span></span>'
@@ -219,6 +235,19 @@ var JMenu = {
    themes:function() {
       var t = jGalleryModel.translate;
       JMenu.commonMenuPage(function() {
+         var content = $('<div><div class="gen-descr">'+t('inst-th')+'</div><br/><br/><ul class="plugins themes">'+t('list-th')+'</ul></div>'
+            +'<div style="text-align:center;width:100%"><a class="a-btn" href="http://dev.envadrouille.org/#create-a-theme">'
+				+'<span class="a-btn-text a-btn-text-dev">'+t('dev-th')+'</span>'
+            +'<span class="a-btn-icon-rightd"><span></span></span>'
+				+'</a></div>');
+         $('#menu-page').append(content);
+         $('#menu-page li').each(function(id, v) {
+            $(v).hover(function() {
+               $(v).find('.descr').stop().animate({opacity:1}, 'fast');
+            }, function() {
+               $(v).find('.descr').stop().animate({opacity:0}, 'fast');
+            });
+         });
       });
    },
 
