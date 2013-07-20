@@ -189,6 +189,10 @@
    color:#BEB;
    cursor: pointer;
 }
+.plugins .pdl a {
+   text-decoration:none;
+   color:#BEB;
+}
 /*
 .plugins > li {
     background: none repeat scroll 0 0 #EEEEEE;
