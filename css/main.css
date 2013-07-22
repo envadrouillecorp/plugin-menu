@@ -96,7 +96,7 @@
    width: 0;
    display: block;
    position: relative;
-   bottom: -1px; 
+   bottom: 0px; 
    margin: auto;
    right:12px;
 }
