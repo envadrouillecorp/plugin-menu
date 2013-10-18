@@ -21,15 +21,17 @@ var JMenu = {
          config.tr['s05'] = 'Installez plusieurs themes pour adapter la galerie à vos goûts';
          config.tr['s06'] = 'Administration - Vue principale';
          config.tr['s07'] = 'Administration - Reconnaissance faciale';
-         config.tr['dlbig'] = 'Télécharger<small>444KB</small>';
+         config.tr['dlbig'] = 'Télécharger<small>463KB</small>';
          config.tr['dev-plug'] = 'Créez votre propre plugin !';
          config.tr['dev-th'] = 'Créez votre propre thème !';
          config.tr['firstlist'] = '<li>Gratuit</li>'
                +'<li>Affiche des cartes de vos randos</li>'
                +'<li>Affiche les images jpg, gif et png</li>'
-               +'<li>Recherche instantanée</li>'
+               +'<li>Geotag des photos grâce aux gpx</li>'
                +'<li>Affiche les vidéos avi, mp4, ogv et webm</li>'
+               +'<li>Recherche instantanée</li>'
                +'<li>Reconnaissance faciale</li>'
+               +'<li>Slideshow en plein écran</li>'
                +'<li>Possède plusieurs <a href="#!themes" class="demo-link">thèmes</a></li>'
                +'<li>Peut être étendu via des <a href="#!plugins" class="demo-link">plugins</a></li>'
                +'<li>Traduit en plusieurs langues</li>'
@@ -37,7 +39,7 @@ var JMenu = {
                +'<li>Fonctionne sans base SQL</li>'
                +'<li>Fonctionne sans PHP* !</li>';
          config.tr['nophp'] = '*Une fois les galeries générées, il est possible de désactiver PHP. La recherche de galeries et de visages fonctionne sans PHP. Seule l\'administration nécessite PHP.';
-         config.tr['browse'] = 'ou <a href="#" class="demo-link">jetez un oeil sur la démo !</a>';
+         config.tr['browse'] = 'ou <a href="#!" class="demo-link">jetez un oeil sur la démo !</a>';
          config.tr['Features'] = 'Fonctionnalités';
          config.tr['others'] = 'Et, contrairement à beaucoup d\'autres galeries...';
          config.tr['secondlist'] = '<li>L\'historique du navigateur fonctionne. Le bouton précédent ramène sur la dernière page visitée.</li>'
@@ -51,7 +53,7 @@ var JMenu = {
                +'<li id="gpx"><span class="img"><img src="./admin/pages/menu/css/plug04.png" /></span><span class="descr"><h2>GPX</h2><p>Ce plugin permet d\'afficher des cartes dans vos galeries.<br/><br/><i>Ce plugin est installé par défaut.</i></p></span><div class="meta"><span class="icon"></span><span class="name">Cartes</span><span class="pdl"></span></div></li>'
                +'<li id="comments" JClass="JComments"><span class="img"><img src="./admin/pages/menu/css/plug02.png" /></span><span class="descr"><h2>Commentaires</h2><p>Ce plugin permet aux visiteurs de commenter vos galeries. (Note: il s\'affiche sur toutes les galeries sauf l\'index de la galerie.)<br/><br/><i class="activate">Cliquez pour activer le plugin.</i></p></span><div class="meta"><span class="icon"></span><span class="name">Comments</span><span class="pdl"></span></div></li>'
                +'<li id="feedback" JClass="JFeedback"><span class="img"><img src="./admin/pages/menu/css/plug03.png" /></span><span class="descr"><h2>Feedback</h2><p>Ajoute un bouton de "feedback" en bas à gauche. Ce plugin permet, par exemple, mettre en valeur un bug. Vous pouvez l\'utiliser sur cette galerie en cas de problème.<br/><br/><i class="activate">Cliquez pour activer le plugin.</i></p></span><div class="meta"><span class="icon"></span><span class="name">Feedback</span><span class="pdl"></span></div></li>';
-         config.tr['inst-th'] = '<b>Pour installer un theme</b><ul><li>Téléchargez le zip du thème</li><li>Décompressez le dans le répertoire ./themes/</li><li>Allez dans les options de l\'administration et actualisez les options</li><li>Vous pouvez maintenant choisir ce thème via la "roue des options" visible en bas à droite dans la galerie.</li></ul>';
+         config.tr['inst-th'] = '<b>Pour installer un theme</b><ul><li>Téléchargez le zip du thème</li><li>Décompressez le dans le répertoire ./themes/</li><li>Allez dans les options de l\'administration et actualisez les options</li><li>Vous pouvez maintenant choisir ce thème via la "roue des options" visible en bas à droite dans la galerie (à tester dans la <a href="#!demo" style="color:#FFF">galerie de démonstration</a>).</li></ul>';
          config.tr['list-th'] = '<li id="default"><span class="img"><img src="./admin/pages/menu/css/th01.png" /></span><span class="descr"><h2>Défaut</h2><p>Thème sombre par défaut.<br/><br/><i>Ce thème est installé par défaut.</i></p></span><div class="meta"><span class="icon"></span><span class="name">Défaut</span><span class="pdl"></span></div></li>'
                +'<li id="photoshow"><span class="img"><img src="./admin/pages/menu/css/th02.png" /></span><span class="descr"><h2>Photoshow</h2><p>Thème Photoshow, référence à la galerie <a href="http://www.photoshow-gallery.com/">Photoshow</a>.<br/><br/><i>Ce thème est installé par défaut.</i></p></span><div class="meta"><span class="icon"></span><span class="name">Photoshow</span><span class="pdl"></span></div></li>'
                +'<li id="old"><span class="img"><img src="./admin/pages/menu/css/th03.png" /></span><span class="descr"><h2>Vieux thème</h2><p>Vieux thème clair. Thème utilisé en 2004 dans la première version d\'EnVadrouille.<br/><br/><i>Ce thème est installé par défaut.</i></p></span><div class="meta"><span class="icon"></span><span class="name">Old</span><span class="pdl"></span></div></li>';
@@ -64,15 +66,17 @@ var JMenu = {
          config.tr['s05'] = 'Customize the gallery by installing multiple themes';
          config.tr['s06'] = 'Administration - Main view';
          config.tr['s07'] = 'Administration - Face recognition';
-         config.tr['dlbig'] = 'Download<small>Only 444KB</small>';
+         config.tr['dlbig'] = 'Download<small>Only 463KB</small>';
          config.tr['dev-plug'] = 'Create your own plugin!';
          config.tr['dev-th'] = 'Create your own theme!';
          config.tr['firstlist'] = '<li>Free</li>'
                +'<li>Displays maps of your trips</li>'
                +'<li>Supports jpg, gif and png images</li>'
-               +'<li>Instant search</li>'
+               +'<li>Geotag your pictures using gpx tracks</li>'
                +'<li>Supports avi, mp4, ogv, webm videos</li>'
+               +'<li>Instant search</li>'
                +'<li>Face recognition</li>'
+               +'<li>Fullscreen slideshow</li>'
                +'<li>Supports <a href="#!themes" class="demo-link">themes</a></li>'
                +'<li>Supports <a href="#!plugins" class="demo-link">plugins</a></li>'
                +'<li>Supports multiple languages</li>'
@@ -80,7 +84,7 @@ var JMenu = {
                +'<li>Does not require an SQL database</li>'
                +'<li>Does not require PHP*</li>';
          config.tr['nophp'] = '*Once pictures have been added to the galleries, you can safely disable PHP! Searching for galleries and faces does not require PHP. The administration is the only part of the gallery that requires PHP.';
-         config.tr['browse'] = 'or <a href="#" class="demo-link">browse the demo!</a>';
+         config.tr['browse'] = 'or <a href="#!" class="demo-link">browse the demo!</a>';
          config.tr['Features'] = 'Features';
          config.tr['others'] = 'And also, unlike many galleries...';
          config.tr['secondlist'] = '<li>Your browser history works. The back button will not bring you to a random page.</li>'
@@ -92,9 +96,9 @@ var JMenu = {
          config.tr['inst-plug'] = '<b>To install a plugin</b><ul><li>Download the zip file of the plugin</li><li>Decompress it in the ./admin/pages/ directory of the gallery</li><li>Go in the gallery options and activate the plugin</li></ul>';
          config.tr['list-plug'] = '<li id="face"><span class="img"><img src="./admin/pages/menu/css/plug01.png" /></span><span class="descr"><h2>Face Recognition</h2><p>This plugin allows you to recognize and search faces in your galleries.<br/><br/><i>This plugin is already shipped with the gallery.</i></p></span><div class="meta"><span class="icon"></span><span class="name">Facial recognition</span><span class="pdl"></span></div></li>'
                +'<li id="gpx"><span class="img"><img src="./admin/pages/menu/css/plug04.png" /></span><span class="descr"><h2>GPX</h2><p>This plugin allows you to show maps in your galleries.<br/><br/><i>This plugin is already shipped with the gallery.</i></p></span><div class="meta"><span class="icon"></span><span class="name">Maps</span><span class="pdl"></span></div></li>'
-               +'<li id="comments" JClass="JComments"><span class="img"><img src="./admin/pages/menu/css/plug02.png" /></span><span class="descr"><h2>Comments</h2><p>This plugin adds a comment box bellow your pictures in your galleries (note: the comment box do not appear in the gallery index).<br/><br/><i class="activate">Click to activate.</i></p></span><div class="meta"><span class="icon"></span><span class="name">Comments</span><span class="pdl"></span></div></li>'
+               +'<li id="comments" JClass="JComments"><span class="img"><img src="./admin/pages/menu/css/plug02.png" /></span><span class="descr"><h2>Comments</h2><p>This plugin adds a comment box bellow your pictures in your galleries (note: the comment box does not appear in the gallery index).<br/><br/><i class="activate">Click to activate.</i></p></span><div class="meta"><span class="icon"></span><span class="name">Comments</span><span class="pdl"></span></div></li>'
                +'<li id="feedback" JClass="JFeedback"><span class="img"><img src="./admin/pages/menu/css/plug03.png" /></span><span class="descr"><h2>Feedback</h2><p>Adds a "feedback" button in the bottom left corner. When clicked, you can highlight precise parts of a gallery. Developped to ease the reporting of bugs. You can use it on this gallery if you notice something odd.<br/><br/><i class="activate">Click to activate.</i></p></span><div class="meta"><span class="icon"></span><span class="name">Feedback</span><span class="pdl"></span></div></li>';
-         config.tr['inst-th'] = '<b>To install a theme</b><ul><li>Download the zip file of the theme</li><li>Decompress it in the ./themes/ directory of the gallery</li><li>Go in the gallery options and update the gallery</li><li>You can now choose the theme using the "option wheel" located in the bottom right corner</li></ul>';
+         config.tr['inst-th'] = '<b>To install a theme</b><ul><li>Download the zip file of the theme</li><li>Decompress it in the ./themes/ directory of the gallery</li><li>Go in the gallery options and update the gallery</li><li>You can now choose the theme using the "option wheel" located in the bottom right corner of the gallery (test it in the <a href="#!demo" style="color:#FFF">demo</a>)</li></ul>';
          config.tr['list-th'] = '<li id="default"><span class="img"><img src="./admin/pages/menu/css/th01.png" /></span><span class="descr"><h2>Default</h2><p>Default dark theme.<br/><br/><i>This theme is already shipped with the gallery.</i></p></span><div class="meta"><span class="icon"></span><span class="name">Default</span><span class="pdl"></span></div></li>'
                +'<li id="photoshow"><span class="img"><img src="./admin/pages/menu/css/th02.png" /></span><span class="descr"><h2>Photoshow</h2><p>Photoshow theme, tribute to the <a href="http://www.photoshow-gallery.com/">Photoshow gallery</a>.<br/><br/><i>This theme is already shipped with the gallery.</i></p></span><div class="meta"><span class="icon"></span><span class="name">Photoshow</span><span class="pdl"></span></div></li>'
                +'<li id="old"><span class="img"><img src="./admin/pages/menu/css/th03.png" /></span><span class="descr"><h2>Old</h2><p>Old light theme. Old theme from the previous version of the EnVadrouille gallery, back in 2004.<br/><br/><i>This theme is already shipped with the gallery.</i></p></span><div class="meta"><span class="icon"></span><span class="name">Old</span><span class="pdl"></span></div></li>';
@@ -331,7 +335,7 @@ var JMenu = {
 if(window.location.hash == '') {
    var fun = window.onhashchange;
    window.onhashchange = null;
-   window.location = '#home';
+   window.location = '#!home';
    window.onhashchange = fun;
 }
 
