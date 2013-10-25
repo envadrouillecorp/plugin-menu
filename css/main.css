@@ -28,10 +28,14 @@
     width: 170px;
 }
 
-.check {
+.check, .install ul {
    width:650px;
    margin:10px auto;
    padding-left:139px;
+}
+.install ul li {
+   margin-bottom:3px;
+   font-weight:bold;
 }
 .check2 {
    width:800px;
@@ -46,7 +50,7 @@
    margin:190px auto 0;
    font-size:14px;
 }
-.check li, .check2 li, .plugins, .gen-descr {
+.check li, .check2 li, .plugins, .gen-descr, .install {
     font-size: 15px;
     font-family:'Droid Sans','Helvetica Neue',Arial,sans-serif;
 }

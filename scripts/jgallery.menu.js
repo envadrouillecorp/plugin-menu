@@ -40,6 +40,8 @@ var JMenu = {
                +'<li>Fonctionne sans PHP* !</li>';
          config.tr['nophp'] = '*Une fois les galeries générées, il est possible de désactiver PHP. La recherche de galeries et de visages fonctionne sans PHP. Seule l\'administration nécessite PHP.';
          config.tr['browse'] = 'ou <a href="#!" class="demo-link">jetez un oeil sur la démo !</a>';
+         config.tr['Install'] = 'Installation';
+         config.tr['install'] = '<ul><li>Uploadez la galerie sur votre serveur</li><li>Validez l\'installation dans l\'administration (http://vous.fr/envadrouille/admin/)</li><li>Ajoutez des dossiers contenant des photos/videos/gpx dans le dossier ./pics</li><li>Ajoutez une description à vos galeries dans l\'administration. Et voilà !</li><li style="margin-top:10px">Un problème ? Posez votre question <a href="http://help.envadrouille.org" style="color:#FFF">ici</a> !</li></ul>';
          config.tr['Features'] = 'Fonctionnalités';
          config.tr['others'] = 'Et, contrairement à beaucoup d\'autres galeries...';
          config.tr['secondlist'] = '<li>L\'historique du navigateur fonctionne. Le bouton précédent ramène sur la dernière page visitée.</li>'
@@ -85,6 +87,8 @@ var JMenu = {
                +'<li>Does not require PHP*</li>';
          config.tr['nophp'] = '*Once pictures have been added to the galleries, you can safely disable PHP! Searching for galleries and faces does not require PHP. The administration is the only part of the gallery that requires PHP.';
          config.tr['browse'] = 'or <a href="#!" class="demo-link">browse the demo!</a>';
+         config.tr['Install'] = 'Your gallery in 4 steps';
+         config.tr['install'] = '<ul><li>Upload the gallery on your server</li><li>Validate the installation in the administration (http://you.com/envadrouille/admin/)</li><li>Upload directories containing pictures/videos/gpx in the "pics" directory</li><li>Add descriptions to your galeries in the administration. That\'s it!</li><li style="margin-top:10px">Need extra help? Ask questions <a href="http://help.envadrouille.org" style="color:#FFF">here</a>!</li></ul>';
          config.tr['Features'] = 'Features';
          config.tr['others'] = 'And also, unlike many galleries...';
          config.tr['secondlist'] = '<li>Your browser history works. The back button will not bring you to a random page.</li>'
@@ -178,6 +182,8 @@ var JMenu = {
 				+'<span class="a-btn-text">'+t('dlbig')+'</span>'
             +'<span class="a-btn-icon-right"><span></span></span>'
 				+'</a> '+t('browse')+'</div>';
+         content += '<div class="features">'+t('Install')+'</div>'
+            +'<div class="install">'+t('install')+'</div>';
          content += '<div class="features">'+t('Features')+'</div>';
          content += '<ul class="check">'
                + t('firstlist')
