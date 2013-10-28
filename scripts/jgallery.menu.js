@@ -13,7 +13,7 @@ var JMenu = {
       }
       var curr_lang = lang || jGallery.lang;
       if(curr_lang == 'fr') {
-         config.tr['title'] = "EnVadrouille, la plus rapide des galeries photos";
+         config.tr['title'] = "EnVadrouille - Galerie Photo";
          config.tr['s01'] = 'Affichez votre parcours avec vos photos';
          config.tr['s02'] = 'Affichez des statistiques sur vos performances sportives';
          config.tr['s03'] = 'Recherchez dans vos galeries (fonctionne sans PHP !)';
@@ -60,7 +60,7 @@ var JMenu = {
                +'<li id="photoshow"><span class="img"><img src="./admin/pages/menu/css/th02.png" /></span><span class="descr"><h2>Photoshow</h2><p>Thème Photoshow, référence à la galerie <a href="http://www.photoshow-gallery.com/">Photoshow</a>.<br/><br/><i>Ce thème est installé par défaut.</i></p></span><div class="meta"><span class="icon"></span><span class="name">Photoshow</span><span class="pdl"></span></div></li>'
                +'<li id="old"><span class="img"><img src="./admin/pages/menu/css/th03.png" /></span><span class="descr"><h2>Vieux thème</h2><p>Vieux thème clair. Thème utilisé en 2004 dans la première version d\'EnVadrouille.<br/><br/><i>Ce thème est installé par défaut.</i></p></span><div class="meta"><span class="icon"></span><span class="name">Old</span><span class="pdl"></span></div></li>';
       } else if(curr_lang == 'en') {
-         config.tr['title'] = "EnVadrouille, a fast and beautiful photo gallery";
+         config.tr['title'] = "EnVadrouille Photo Gallery";
          config.tr['s01'] = 'Show GPX traces of your trips with your pictures';
          config.tr['s02'] = 'Display detailled statistics';
          config.tr['s03'] = 'Search in your galleries (works without PHP!)';
