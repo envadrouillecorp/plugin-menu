@@ -59,6 +59,7 @@ var JMenu = {
          config.tr['list-th'] = '<li id="default"><span class="img"><img src="./admin/pages/menu/css/th01.png" /></span><span class="descr"><h2>Défaut</h2><p>Thème sombre par défaut.<br/><br/><i>Ce thème est installé par défaut.</i></p></span><div class="meta"><span class="icon"></span><span class="name">Défaut</span><span class="pdl"></span></div></li>'
                +'<li id="photoshow"><span class="img"><img src="./admin/pages/menu/css/th02.png" /></span><span class="descr"><h2>Photoshow</h2><p>Thème Photoshow, référence à la galerie <a href="http://www.photoshow-gallery.com/">Photoshow</a>.<br/><br/><i>Ce thème est installé par défaut.</i></p></span><div class="meta"><span class="icon"></span><span class="name">Photoshow</span><span class="pdl"></span></div></li>'
                +'<li id="old"><span class="img"><img src="./admin/pages/menu/css/th03.png" /></span><span class="descr"><h2>Vieux thème</h2><p>Vieux thème clair. Thème utilisé en 2004 dans la première version d\'EnVadrouille.<br/><br/><i>Ce thème est installé par défaut.</i></p></span><div class="meta"><span class="icon"></span><span class="name">Old</span><span class="pdl"></span></div></li>';
+         config.tr['contact'] = "Contact - \x62\x61\x70\x74\x69\x73\x74\x65\x2E\x6C\x65\x70\x65\x72\x73\x40\x67\x6D\x61\x69\x6C\x2E\x63\x6F\x6D";
       } else if(curr_lang == 'en') {
          config.tr['title'] = "EnVadrouille Photo Gallery";
          config.tr['s01'] = 'Show GPX traces of your trips with your pictures';
@@ -106,6 +107,7 @@ var JMenu = {
          config.tr['list-th'] = '<li id="default"><span class="img"><img src="./admin/pages/menu/css/th01.png" /></span><span class="descr"><h2>Default</h2><p>Default dark theme.<br/><br/><i>This theme is already shipped with the gallery.</i></p></span><div class="meta"><span class="icon"></span><span class="name">Default</span><span class="pdl"></span></div></li>'
                +'<li id="photoshow"><span class="img"><img src="./admin/pages/menu/css/th02.png" /></span><span class="descr"><h2>Photoshow</h2><p>Photoshow theme, tribute to the <a href="http://www.photoshow-gallery.com/">Photoshow gallery</a>.<br/><br/><i>This theme is already shipped with the gallery.</i></p></span><div class="meta"><span class="icon"></span><span class="name">Photoshow</span><span class="pdl"></span></div></li>'
                +'<li id="old"><span class="img"><img src="./admin/pages/menu/css/th03.png" /></span><span class="descr"><h2>Old</h2><p>Old light theme. Old theme from the previous version of the EnVadrouille gallery, back in 2004.<br/><br/><i>This theme is already shipped with the gallery.</i></p></span><div class="meta"><span class="icon"></span><span class="name">Old</span><span class="pdl"></span></div></li>';
+         config.tr['contact'] = "Contact - \x62\x61\x70\x74\x69\x73\x74\x65\x2E\x6C\x65\x70\x65\x72\x73\x40\x67\x6D\x61\x69\x6C\x2E\x63\x6F\x6D";
       }
       if(lang && JMenu.pages(jGallery.currentPage) && window.jGallery) {
          jGallery.canReload = 1;
@@ -194,6 +196,7 @@ var JMenu = {
                +t('secondlist')
             +'</ul>'
             +'<div style="height:60px"></div>';
+         content += '<div id="contact">'+t('contact')+'</div>';
      
          $('#menu-page').append(content);
          $('#slider img').each(function() {

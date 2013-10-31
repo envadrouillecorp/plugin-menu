@@ -50,7 +50,7 @@
    margin:190px auto 0;
    font-size:14px;
 }
-.check li, .check2 li, .plugins, .gen-descr, .install {
+.check li, .check2 li, .plugins, .gen-descr, .install, #contact {
     font-size: 15px;
     font-family:'Droid Sans','Helvetica Neue',Arial,sans-serif;
 }
@@ -603,3 +603,8 @@ Author URI: http://dev7studios.com
 	font-weight:bold;
 }
 
+#contact {
+   text-align:center;
+   color:#DDD;
+   font-size:12px;
+}
