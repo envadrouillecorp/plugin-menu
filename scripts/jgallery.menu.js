@@ -21,7 +21,7 @@ var JMenu = {
          config.tr['s05'] = 'Installez plusieurs themes pour adapter la galerie à vos goûts';
          config.tr['s06'] = 'Administration - Vue principale';
          config.tr['s07'] = 'Administration - Reconnaissance faciale';
-         config.tr['dlbig'] = 'Télécharger<small>463KB</small>';
+         config.tr['dlbig'] = 'Télécharger<small>480KB</small>';
          config.tr['dev-plug'] = 'Créez votre propre plugin !';
          config.tr['dev-th'] = 'Créez votre propre thème !';
          config.tr['firstlist'] = '<li>Gratuit</li>'
@@ -69,7 +69,7 @@ var JMenu = {
          config.tr['s05'] = 'Customize the gallery by installing multiple themes';
          config.tr['s06'] = 'Administration - Main view';
          config.tr['s07'] = 'Administration - Face recognition';
-         config.tr['dlbig'] = 'Download<small>Only 463KB</small>';
+         config.tr['dlbig'] = 'Download<small>Only 480KB</small>';
          config.tr['dev-plug'] = 'Create your own plugin!';
          config.tr['dev-th'] = 'Create your own theme!';
          config.tr['firstlist'] = '<li>Free</li>'
@@ -125,7 +125,8 @@ var JMenu = {
       $('#o').css('display', 'block');
       $('.subheader').css('display', 'block');
       $('#menu-page').remove();
-      $('#wrapper').css('marginTop', '20px');
+      $('#wrapper').css('paddingTop', '20px');
+      $('#wrapper').css('boxSizing', 'border-box');
       $('.menu-speech-bubble').stop().unbind('mouseenter mouseleave').css({position:'absolute', zIndex:'5000'}).animate({top:pos}, '5000', function () {
          $('.menu-speech-bubble').addClass('menu-speech-bubble-arrow');
          $('.menu-speech-bubble').hover(function() {
