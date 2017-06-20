@@ -48,7 +48,6 @@ var JMenu = {
                +'<li>Un clic-molette sur une image affiche l\'image originale dans un nouvel onglet.</li>'
                +'<li>Un clic-molette sur une galerie ouvre la galerie dans un nouvel onglet.</li>'
                +'<li>Grâce à DownThemAll, il est possible de télécharger une galerie complète en un clic sans passer via le téléchargement d\'un fichier zip gigantesque.</li>'
-               +'<li>Vous pouvez déplacer tout votre site dans votre dossier Public Dropbox et le site continuera à fonctionner directement depuis votre Dropbox! (<a href="http://dl.dropbox.com/u/146655840/index.html" class="demo-link">demo</a>)</li>'
                +'<li>La plupart des opérations sont instantanées (par exemple changer la langue de cette page ne nécessite pas de recharger la page).</li>';
          config.tr['inst-plug'] = '<b>Pour installer un plugin allez dans la catégorie "plugins" de l\'administration.</b>';
          config.tr['list-plug'] = '<li id="face"><span class="img"><img src="./admin/pages/menu/css/plug01.png" /></span><span class="descr"><h2>Reconnaissance faciale</h2><p>Ce plugin permet de reconnaitre les visages dans vos photos.<br/><br/><i>Ce plugin est installé par défaut.</i></p></span><div class="meta"><span class="icon"></span><span class="name">Reconnaissance faciale</span><span class="pdl"></span></div></li>'
@@ -97,7 +96,6 @@ var JMenu = {
                +'<li>A middle click on an image will directly display the full-sized version of the image.</li>'
                +'<li>All gallery links are middle-clickable. When you middle-click on a gallery, it will open it on a new tab and not just show random javascript errors.</li>'
                +'<li>Using DownThemAll your visitors can download all original pictures of a gallery in one click.</li>'
-               +'<li>You can upload your full site in your public DropBox directory and it will continue to work! (<a href="http://dl.dropbox.com/u/146655840/index.html" class="demo-link">demo</a>)</li>'
                +'<li>Most of the operations performed by the gallery are instantaneous (e.g., try to change the language of this page).</li>';
          config.tr['inst-plug'] = '<b>To install a plugin, go in the "plugin" categorie of the administration.</b>';
          config.tr['list-plug'] = '<li id="face"><span class="img"><img src="./admin/pages/menu/css/plug01.png" /></span><span class="descr"><h2>Face Recognition</h2><p>This plugin allows you to recognize and search faces in your galleries.<br/><br/><i>This plugin is already shipped with the gallery.</i></p></span><div class="meta"><span class="icon"></span><span class="name">Facial recognition</span><span class="pdl"></span></div></li>'
