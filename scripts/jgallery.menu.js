@@ -21,7 +21,7 @@ var JMenu = {
          config.tr['s05'] = 'Installez plusieurs themes pour adapter la galerie à vos goûts';
          config.tr['s06'] = 'Administration - Vue principale';
          config.tr['s07'] = 'Administration - Reconnaissance faciale';
-         config.tr['dlbig'] = 'Télécharger<small>480KB</small>';
+         config.tr['dlbig'] = 'Télécharger<small>600KB</small>';
          config.tr['dev-plug'] = 'Créez votre propre plugin !';
          config.tr['dev-th'] = 'Créez votre propre thème !';
          config.tr['firstlist'] = '<li>Gratuit</li>'
@@ -41,7 +41,7 @@ var JMenu = {
          config.tr['nophp'] = '*Une fois les galeries générées, il est possible de désactiver PHP. La recherche de galeries et de visages fonctionne sans PHP. Seule l\'administration nécessite PHP.';
          config.tr['browse'] = 'ou <a href="#!" class="demo-link">jetez un oeil sur la démo !</a>';
          config.tr['Install'] = 'Installation';
-         config.tr['install'] = '<ul><li>Uploadez la galerie sur votre serveur</li><li>Validez l\'installation dans l\'administration (http://vous.fr/envadrouille/admin/)</li><li>Ajoutez des dossiers contenant des photos/videos/gpx dans le dossier ./pics</li><li>Ajoutez une description à vos galeries dans l\'administration. Et voilà !</li><li style="margin-top:10px">Un problème ? Posez votre question <a href="http://help.envadrouille.org" style="color:#FFF">ici</a> !</li></ul>';
+         config.tr['install'] = '<ul><li>Uploadez la galerie sur votre serveur</li><li>Validez l\'installation dans l\'administration (http://vous.fr/envadrouille/admin/)</li><li>Ajoutez des dossiers contenant des photos/videos/gpx dans le dossier ./pics</li><li>Ajoutez une description à vos galeries dans l\'administration. Et voilà !</li><li style="margin-top:10px">Un problème ? Envoyez moi un email (\x62\x61\x70\x74\x69\x73\x74\x65\x2E\x6C\x65\x70\x65\x72\x73\x40\x67\x6D\x61\x69\x6C\x2E\x63\x6F\x6D) !</li></ul>';
          config.tr['Features'] = 'Fonctionnalités';
          config.tr['others'] = 'Et, contrairement à beaucoup d\'autres galeries...';
          config.tr['secondlist'] = '<li>L\'historique du navigateur fonctionne. Le bouton précédent ramène sur la dernière page visitée.</li>'
@@ -70,7 +70,7 @@ var JMenu = {
          config.tr['s05'] = 'Customize the gallery by installing multiple themes';
          config.tr['s06'] = 'Administration - Main view';
          config.tr['s07'] = 'Administration - Face recognition';
-         config.tr['dlbig'] = 'Download<small>Only 480KB</small>';
+         config.tr['dlbig'] = 'Download<small>Only 600KB</small>';
          config.tr['dev-plug'] = 'Create your own plugin!';
          config.tr['dev-th'] = 'Create your own theme!';
          config.tr['firstlist'] = '<li>Free</li>'
@@ -90,7 +90,7 @@ var JMenu = {
          config.tr['nophp'] = '*Once pictures have been added to the galleries, you can safely disable PHP! Searching for galleries and faces does not require PHP. The administration is the only part of the gallery that requires PHP.';
          config.tr['browse'] = 'or <a href="#!" class="demo-link">browse the demo!</a>';
          config.tr['Install'] = 'Your gallery in 4 steps';
-         config.tr['install'] = '<ul><li>Upload the gallery on your server</li><li>Validate the installation in the administration (http://you.com/envadrouille/admin/)</li><li>Upload directories containing pictures/videos/gpx in the "pics" directory</li><li>Add descriptions to your galeries in the administration. That\'s it!</li><li style="margin-top:10px">Need extra help? Ask questions <a href="http://help.envadrouille.org" style="color:#FFF">here</a>!</li></ul>';
+         config.tr['install'] = '<ul><li>Upload the gallery on your server</li><li>Validate the installation in the administration (http://you.com/envadrouille/admin/)</li><li>Upload directories containing pictures/videos/gpx in the "pics" directory</li><li>Add descriptions to your galeries in the administration. That\'s it!</li><li style="margin-top:10px">Need extra help? Send me an email (\x62\x61\x70\x74\x69\x73\x74\x65\x2E\x6C\x65\x70\x65\x72\x73\x40\x67\x6D\x61\x69\x6C\x2E\x63\x6F\x6D)!</li></ul>';
          config.tr['Features'] = 'Features';
          config.tr['others'] = 'And also, unlike many galleries...';
          config.tr['secondlist'] = '<li>Your browser history works. The back button will not bring you to a random page.</li>'
