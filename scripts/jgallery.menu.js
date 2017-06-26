@@ -182,7 +182,7 @@ var JMenu = {
             + '</div>'
          +'</div>';
          content += 
-            '<div style="text-align:center;width:100%"><a class="a-btn" href="http://update.envadrouille.org/latest.zip">'
+            '<div style="text-align:center;width:100%"><a class="a-btn" href="http://update.envadrouille.org/envadrouille.zip">'
 				+'<span class="a-btn-text">'+t('dlbig')+'</span>'
             +'<span class="a-btn-icon-right"><span></span></span>'
 				+'</a> '+t('browse')+'</div>';
