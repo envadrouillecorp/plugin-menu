@@ -18,47 +18,47 @@ var JMenu = {
          config.tr['s02'] = 'Affichez des statistiques sur vos performances sportives';
          config.tr['s03'] = 'Recherchez dans vos galeries (fonctionne sans PHP !)';
          config.tr['s04'] = 'Reconnaissez les visages dans vos photos';
-         config.tr['s05'] = 'Installez plusieurs themes pour adapter la galerie à vos goûts';
+         config.tr['s05'] = 'Installez plusieurs themes pour adapter la galerie Ã  vos goÃ»ts';
          config.tr['s06'] = 'Administration - Vue principale';
          config.tr['s07'] = 'Administration - Reconnaissance faciale';
-         config.tr['dlbig'] = 'Télécharger<small>600KB</small>';
-         config.tr['dev-plug'] = 'Créez votre propre plugin !';
-         config.tr['dev-th'] = 'Créez votre propre thème !';
+         config.tr['dlbig'] = 'TÃ©lÃ©charger<small>600KB</small>';
+         config.tr['dev-plug'] = 'CrÃ©ez votre propre plugin !';
+         config.tr['dev-th'] = 'CrÃ©ez votre propre thÃ¨me !';
          config.tr['firstlist'] = '<li>Gratuit</li>'
                +'<li>Affiche des cartes de vos randos</li>'
                +'<li>Affiche les images jpg, gif et png</li>'
-               +'<li>Geotag des photos grâce aux gpx</li>'
-               +'<li>Affiche les vidéos avi, mp4, ogv et webm</li>'
-               +'<li>Recherche instantanée</li>'
+               +'<li>Geotag des photos grÃ¢ce aux gpx</li>'
+               +'<li>Affiche les vidÃ©os avi, mp4, ogv et webm</li>'
+               +'<li>Recherche instantanÃ©e</li>'
                +'<li>Reconnaissance faciale</li>'
-               +'<li>Slideshow en plein écran</li>'
-               +'<li>Possède plusieurs <a href="#!themes" class="demo-link">thèmes</a></li>'
-               +'<li>Peut être étendu via des <a href="#!plugins" class="demo-link">plugins</a></li>'
+               +'<li>Slideshow en plein Ã©cran</li>'
+               +'<li>PossÃ¨de plusieurs <a href="#!themes" class="demo-link">thÃ¨mes</a></li>'
+               +'<li>Peut Ãªtre Ã©tendu via des <a href="#!plugins" class="demo-link">plugins</a></li>'
                +'<li>Traduit en plusieurs langues</li>'
                +'<li>Disponible sur <a href="https://github.com/envadrouillecorp/envadrouille" class="demo-link">github</a></li>'
                +'<li>Fonctionne sans base SQL</li>'
                +'<li>Fonctionne sans PHP* !</li>';
-         config.tr['nophp'] = '*Une fois les galeries générées, il est possible de désactiver PHP. La recherche de galeries et de visages fonctionne sans PHP. Seule l\'administration nécessite PHP.';
-         config.tr['browse'] = 'ou <a href="#!" class="demo-link">jetez un oeil sur la démo !</a>';
+         config.tr['nophp'] = '*Une fois les galeries gÃ©nÃ©rÃ©es, il est possible de dÃ©sactiver PHP. La recherche de galeries et de visages fonctionne sans PHP. Seule l\'administration nÃ©cessite PHP.';
+         config.tr['browse'] = 'ou <a href="#!" class="demo-link">jetez un oeil sur la dÃ©mo !</a>';
          config.tr['Install'] = 'Installation';
-         config.tr['install'] = '<ul><li>Uploadez la galerie sur votre serveur</li><li>Validez l\'installation dans l\'administration (http://vous.fr/envadrouille/admin/)</li><li>Ajoutez des dossiers contenant des photos/videos/gpx dans le dossier ./pics</li><li>Ajoutez une description à vos galeries dans l\'administration. Et voilà !</li><li style="margin-top:10px">Un problème ? Envoyez moi un email (\x62\x61\x70\x74\x69\x73\x74\x65\x2E\x6C\x65\x70\x65\x72\x73\x40\x67\x6D\x61\x69\x6C\x2E\x63\x6F\x6D) !</li></ul>';
-         config.tr['Features'] = 'Fonctionnalités';
-         config.tr['others'] = 'Et, contrairement à beaucoup d\'autres galeries...';
-         config.tr['secondlist'] = '<li>L\'historique du navigateur fonctionne. Le bouton précédent ramène sur la dernière page visitée.</li>'
+         config.tr['install'] = '<ul><li>Uploadez la galerie sur votre serveur</li><li>Validez l\'installation dans l\'administration (http://vous.fr/envadrouille/admin/)</li><li>Ajoutez des dossiers contenant des photos/videos/gpx dans le dossier ./pics</li><li>Ajoutez une description Ã  vos galeries dans l\'administration. Et voilÃ  !</li><li style="margin-top:10px">Un problÃ¨me ? Envoyez moi un email (\x62\x61\x70\x74\x69\x73\x74\x65\x2E\x6C\x65\x70\x65\x72\x73\x40\x67\x6D\x61\x69\x6C\x2E\x63\x6F\x6D) !</li></ul>';
+         config.tr['Features'] = 'FonctionnalitÃ©s';
+         config.tr['others'] = 'Et, contrairement Ã  beaucoup d\'autres galeries...';
+         config.tr['secondlist'] = '<li>L\'historique du navigateur fonctionne. Le bouton prÃ©cÃ©dent ramÃ¨ne sur la derniÃ¨re page visitÃ©e.</li>'
                +'<li>Un clic-molette sur une image affiche l\'image originale dans un nouvel onglet.</li>'
                +'<li>Un clic-molette sur une galerie ouvre la galerie dans un nouvel onglet.</li>'
-               +'<li>Grâce à DownThemAll, il est possible de télécharger une galerie complète en un clic sans passer via le téléchargement d\'un fichier zip gigantesque.</li>'
-               +'<li>La plupart des opérations sont instantanées (par exemple changer la langue de cette page ne nécessite pas de recharger la page).</li>';
-         config.tr['inst-plug'] = '<b>Pour installer un plugin allez dans la catégorie "plugins" de l\'administration.</b>';
-         config.tr['list-plug'] = '<li id="face"><span class="img"><img src="./admin/pages/menu/css/plug01.png" /></span><span class="descr"><h2>Reconnaissance faciale</h2><p>Ce plugin permet de reconnaitre les visages dans vos photos.<br/><br/><i>Ce plugin est installé par défaut.</i></p></span><div class="meta"><span class="icon"></span><span class="name">Reconnaissance faciale</span><span class="pdl"></span></div></li>'
-               +'<li id="gpx"><span class="img"><img src="./admin/pages/menu/css/plug04.png" /></span><span class="descr"><h2>GPX</h2><p>Ce plugin permet d\'afficher des cartes dans vos galeries.<br/><br/><i>Ce plugin est installé par défaut.</i></p></span><div class="meta"><span class="icon"></span><span class="name">Cartes</span><span class="pdl"></span></div></li>'
+               +'<li>GrÃ¢ce Ã  DownThemAll, il est possible de tÃ©lÃ©charger une galerie complÃ¨te en un clic sans passer via le tÃ©lÃ©chargement d\'un fichier zip gigantesque.</li>'
+               +'<li>La plupart des opÃ©rations sont instantanÃ©es (par exemple changer la langue de cette page ne nÃ©cessite pas de recharger la page).</li>';
+         config.tr['inst-plug'] = '<b>Pour installer un plugin allez dans la catÃ©gorie "plugins" de l\'administration.</b>';
+         config.tr['list-plug'] = '<li id="face"><span class="img"><img src="./admin/pages/menu/css/plug01.png" /></span><span class="descr"><h2>Reconnaissance faciale</h2><p>Ce plugin permet de reconnaitre les visages dans vos photos.<br/><br/><i>Ce plugin est installÃ© par dÃ©faut.</i></p></span><div class="meta"><span class="icon"></span><span class="name">Reconnaissance faciale</span><span class="pdl"></span></div></li>'
+               +'<li id="gpx"><span class="img"><img src="./admin/pages/menu/css/plug04.png" /></span><span class="descr"><h2>GPX</h2><p>Ce plugin permet d\'afficher des cartes dans vos galeries.<br/><br/><i>Ce plugin est installÃ© par dÃ©faut.</i></p></span><div class="meta"><span class="icon"></span><span class="name">Cartes</span><span class="pdl"></span></div></li>'
                +'<li id="comments" JClass="JComments"><span class="img"><img src="./admin/pages/menu/css/plug02.png" /></span><span class="descr"><h2>Commentaires</h2><p>Ce plugin permet aux visiteurs de commenter vos galeries. (Note: il s\'affiche sur toutes les galeries sauf l\'index de la galerie.)<br/><br/><i class="activate">Cliquez pour activer le plugin.</i></p></span><div class="meta"><span class="icon"></span><span class="name">Comments</span><span class="pdl"></span></div></li>'
-               +'<li id="feedback" JClass="JFeedback"><span class="img"><img src="./admin/pages/menu/css/plug03.png" /></span><span class="descr"><h2>Feedback</h2><p>Ajoute un bouton de "feedback" en bas à gauche. Ce plugin permet, par exemple, mettre en valeur un bug. Vous pouvez l\'utiliser sur cette galerie en cas de problème.<br/><br/><i class="activate">Cliquez pour activer le plugin.</i></p></span><div class="meta"><span class="icon"></span><span class="name">Feedback</span><span class="pdl"></span></div></li>'
-               +'<li id="multilang"><span class="img"><img src="./admin/pages/menu/css/plug05.png" /></span><span class="descr"><h2>Multilang</h2><p>Ajoute la possibilité d\'écrire les descriptions des galeries en plusieurs langues. <i>Ce plugin est actif sur ce site. Allez dans une galerie de la démo et changez de langue pour voir. Vous pouvez installer ce plugin depuis l\'administration.</i></p></span><div class="meta"><span class="icon"></span><span class="name">Multilang</span><span class="pdl"></span></div></li>';
-         config.tr['inst-th'] = '<b>Pour installer un theme</b><ul><li>Téléchargez le zip du thème</li><li>Décompressez le dans le répertoire ./themes/</li><li>Allez dans les options de l\'administration et actualisez les options</li><li>Vous pouvez maintenant choisir ce thème via la "roue des options" visible en bas à droite dans la galerie (à tester dans la <a href="#!demo" style="color:#FFF">galerie de démonstration</a>).</li></ul>';
-         config.tr['list-th'] = '<li id="default"><span class="img"><img src="./admin/pages/menu/css/th01.png" /></span><span class="descr"><h2>Défaut</h2><p>Thème sombre par défaut.<br/><br/><i>Ce thème est installé par défaut.</i></p></span><div class="meta"><span class="icon"></span><span class="name">Défaut</span><span class="pdl"></span></div></li>'
-               +'<li id="photoshow"><span class="img"><img src="./admin/pages/menu/css/th02.png" /></span><span class="descr"><h2>Photoshow</h2><p>Thème Photoshow, référence à la galerie <a href="http://www.photoshow-gallery.com/">Photoshow</a>.<br/><br/><i>Ce thème est installé par défaut.</i></p></span><div class="meta"><span class="icon"></span><span class="name">Photoshow</span><span class="pdl"></span></div></li>'
-               +'<li id="old"><span class="img"><img src="./admin/pages/menu/css/th03.png" /></span><span class="descr"><h2>Vieux thème</h2><p>Vieux thème clair. Thème utilisé en 2004 dans la première version d\'EnVadrouille.<br/><br/><i>Ce thème est installé par défaut.</i></p></span><div class="meta"><span class="icon"></span><span class="name">Old</span><span class="pdl"></span></div></li>';
+               +'<li id="feedback" JClass="JFeedback"><span class="img"><img src="./admin/pages/menu/css/plug03.png" /></span><span class="descr"><h2>Feedback</h2><p>Ajoute un bouton de "feedback" en bas Ã  gauche. Ce plugin permet, par exemple, mettre en valeur un bug. Vous pouvez l\'utiliser sur cette galerie en cas de problÃ¨me.<br/><br/><i class="activate">Cliquez pour activer le plugin.</i></p></span><div class="meta"><span class="icon"></span><span class="name">Feedback</span><span class="pdl"></span></div></li>'
+               +'<li id="multilang"><span class="img"><img src="./admin/pages/menu/css/plug05.png" /></span><span class="descr"><h2>Multilang</h2><p>Ajoute la possibilitÃ© d\'Ã©crire les descriptions des galeries en plusieurs langues. <i>Ce plugin est actif sur ce site. Allez dans une galerie de la dÃ©mo et changez de langue pour voir. Vous pouvez installer ce plugin depuis l\'administration.</i></p></span><div class="meta"><span class="icon"></span><span class="name">Multilang</span><span class="pdl"></span></div></li>';
+         config.tr['inst-th'] = '<b>Pour installer un theme</b><ul><li>TÃ©lÃ©chargez le zip du thÃ¨me</li><li>DÃ©compressez le dans le rÃ©pertoire ./themes/</li><li>Allez dans les options de l\'administration et actualisez les options</li><li>Vous pouvez maintenant choisir ce thÃ¨me via la "roue des options" visible en bas Ã  droite dans la galerie (Ã  tester dans la <a href="#!demo" style="color:#FFF">galerie de dÃ©monstration</a>).</li></ul>';
+         config.tr['list-th'] = '<li id="default"><span class="img"><img src="./admin/pages/menu/css/th01.png" /></span><span class="descr"><h2>DÃ©faut</h2><p>ThÃ¨me sombre par dÃ©faut.<br/><br/><i>Ce thÃ¨me est installÃ© par dÃ©faut.</i></p></span><div class="meta"><span class="icon"></span><span class="name">DÃ©faut</span><span class="pdl"></span></div></li>'
+               +'<li id="photoshow"><span class="img"><img src="./admin/pages/menu/css/th02.png" /></span><span class="descr"><h2>Photoshow</h2><p>ThÃ¨me Photoshow, rÃ©fÃ©rence Ã  la galerie <a href="http://www.photoshow-gallery.com/">Photoshow</a>.<br/><br/><i>Ce thÃ¨me est installÃ© par dÃ©faut.</i></p></span><div class="meta"><span class="icon"></span><span class="name">Photoshow</span><span class="pdl"></span></div></li>'
+               +'<li id="old"><span class="img"><img src="./admin/pages/menu/css/th03.png" /></span><span class="descr"><h2>Vieux thÃ¨me</h2><p>Vieux thÃ¨me clair. ThÃ¨me utilisÃ© en 2004 dans la premiÃ¨re version d\'EnVadrouille.<br/><br/><i>Ce thÃ¨me est installÃ© par dÃ©faut.</i></p></span><div class="meta"><span class="icon"></span><span class="name">Old</span><span class="pdl"></span></div></li>';
          config.tr['contact'] = "Contact - \x62\x61\x70\x74\x69\x73\x74\x65\x2E\x6C\x65\x70\x65\x72\x73\x40\x67\x6D\x61\x69\x6C\x2E\x63\x6F\x6D";
       } else if(curr_lang == 'en') {
          config.tr['title'] = "EnVadrouille Photo Gallery";
